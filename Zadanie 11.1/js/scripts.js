@@ -12,7 +12,7 @@ Phone.prototype.printInfo = function() {
 }
 
 /******** WHERE TO BUY ***********/
-function Purchase(brand, applestore, media, agd, saturn) {
+function Purchase(brand, media, agd, saturn) {
   this.brand = brand;
   this.media = media;
   this.agd = agd;
