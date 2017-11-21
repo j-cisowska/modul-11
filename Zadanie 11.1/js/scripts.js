@@ -3,9 +3,15 @@ function Phone(brand, price, color, memory, materials, size) {
 	this.brand = brand;
 	this.price = price;
 	this.color = color;
+<<<<<<< HEAD
 	this.memory = memory;
 	this.materials = materials;
 	this.size = size;
+=======
+  	this.memory = memory;
+  	this.materials = materials;
+  	this.size = size;
+>>>>>>> e8f1ed7374408dcb36c1b947f9be240882cfd1ba
 }
 Phone.prototype.printInfo = function() {
 		console.log("This is " + this.brand + " phone." + " It is " + this.color + " and it cost " + this.price + "$" + ". " + this.brand + " has " + this.memory + "GB of memory and it's main material is " + this.materials + ". " + "It's " + this.size + " inches.");
