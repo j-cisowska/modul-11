@@ -17,7 +17,7 @@ Button.prototype = {
     });
 	}
 }
-  var btn1 = new Button('Hello!');
+  var btn1 = new Button('Click!');
   btn1.create();
 });
 
