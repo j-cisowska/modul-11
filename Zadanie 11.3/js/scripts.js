@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
 
   function randomString() {
@@ -11,7 +10,7 @@ $(document).ready(function() {
 }
   
   function Column(name) {
-    var self = this; // kontekst?
+    var self = this; 
 
     this.id = randomString();
     this.name = name;
@@ -63,7 +62,7 @@ $(document).ready(function() {
   
 
 function Card(description) {
-	var self = this; //kontekst?
+	var self = this; 
 
     this.id = randomString();
     this.description = description;
@@ -74,7 +73,7 @@ function Card(description) {
     var $card = $('<li>').addClass('card');
     var $cardDescription = $('<p>').addClass('card-description').text(self.description);
     var $cardDelete = $('<button>').addClass('btn-delete').addClass('btn btn-danger').text('x');
-      // usunięcie karty
+      
       $cardDelete.click(function(){
         self.removeCard();
 });
@@ -84,13 +83,13 @@ function Card(description) {
 return $card;
       
     }//create card closing
+   
+}//card prototype closing
   
   Card.prototype = {
 	removeCard: function() {
 		this.$element.remove();
-    }//remove card closing
-	
-}//card prototype closing
+   }//remove card closing
   
 }//card description
 
@@ -118,7 +117,25 @@ var board = {
     	board.addColumn(column);
   });
   
+  // stworzenie kolumn
+var toDoColumn = new Column('To do');
+var doingColumn = new Column('Doing');
+var doneColumn = new Column('Done');
 
+// dodanie kolumn
+board.addColumn(toDoColumn);
+board.addColumn(doingColumn);
+board.addColumn(doneColumn);
+
+// tworzenie kart
+var card1 = new Card('Create a card');
+var card2 = new Card('Create a card');
+var card3 = new Card('Create a card');
+
+// dodawanie kart do kolumn
+toDoColumn.addCard(card1);
+doingColumn.addCard(card2);
+doneColumn.addCard(card3);
 
 })
 //https://codepen.io/anon/pen/gXewEm
